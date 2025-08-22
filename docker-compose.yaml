@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres-database
+    container_name: movieflix_db
     environment:
       POSTGRES_DB: movieflix
       POSTGRES_USER: postgres
