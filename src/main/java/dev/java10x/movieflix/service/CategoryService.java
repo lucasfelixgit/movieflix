@@ -1,8 +1,6 @@
 package dev.java10x.movieflix.service;
 
-import dev.java10x.movieflix.controller.response.CategoryResponse;
 import dev.java10x.movieflix.entity.Category;
-import dev.java10x.movieflix.mapper.CategoryMapper;
 import dev.java10x.movieflix.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,10 +22,8 @@ public class CategoryService {
         return categoryRepository.save(category);
     }
 
-    public CategoryResponse findById(Long id) {
-        Optional<Category> optCategory = categoryRepository.findById(id);
-
-        return optCategory.map(CategoryMapper::toCategoryResponse).orElse(null);
+    public Optional<Category> findById(Long id) {
+        return categoryRepository.findById(id);
     }
 
     public void deleteById(Long id) {
