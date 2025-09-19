@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: movieflix
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mvxdb
+    username: admin
+    password: 123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+#  hibernate:
+#    ddl-auto: create
+
+  flyway:
+    enabled: true

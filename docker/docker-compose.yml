@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres
+    container_name: pg_db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: mvxdb
+    ports:
+      - "5432:5432"
