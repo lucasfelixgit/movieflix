@@ -17,3 +17,9 @@ spring:
 
   flyway:
     enabled: true
+
+movieflix:
+  security:
+    secret: "oRhaC9PtDFVTC7qpqJKTv//j6TmqAFAdQQqshE0P6I="
+    #temporary disposable secret key for testing purposes only
+    #generated with ~ openssl rand -base64 32
